@@ -1,4 +1,3 @@
-﻿# -*- coding: utf-8 -*-
 from flask import Flask, render_template, request
 
 import datetime
@@ -8,21 +7,23 @@ import numpy as np
 app = Flask(__name__)
 
 # 플레이스 홀더를 설정합니다.
-X = tf.placeholder(tf.float32, shape=[None, 4])
-Y = tf.placeholder(tf.float32, shape=[None, 1])
+tf.compat.v1.disable_eager_execution()
 
-W = tf.Variable(tf.random_normal([4, 1]), name="weight")
-b = tf.Variable(tf.random_normal([1]), name="bias")
+X = tf.compat.v1.placeholder(tf.float32, shape=[None, 4])
+Y = tf.compat.v1.placeholder(tf.float32, shape=[None, 1])
+
+W = tf.Variable(tf.random.normal([4, 1]), name="weight")
+b = tf.Variable(tf.random.normal([1]), name="bias")
 
 # 가설을 설정합니다.
 hypothesis = tf.matmul(X, W) + b
 
 # 저장된 모델을 불러오는 객체를 선언합니다.
-saver = tf.train.Saver()
-model = tf.global_variables_initializer()
+saver = tf.compat.v1.train.Saver()
+model = tf.compat.v1.initializers.global_variables()
 
 # 세션 객체를 생성합니다.
-sess = tf.Session()
+sess = tf.compat.v1.Session()
 sess.run(model)
 
 # 저장된 모델을 세션에 적용합니다.
