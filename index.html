@@ -1,9 +1,6 @@
 <html>
 <head>
 <title>META DOLLWEB</title>
-</head>
-<body>
-<h1><a href="index.html">META DOLLWEB</a></h1>
 <style>
 	*{
 		list-style: none;
@@ -68,6 +65,7 @@
 	}
 </style>	
 </head>
+<body>
 <header>
 	<nav>
 		<span><a href="https://dollweb.github.io/meta2022/">Home</a></span>
@@ -75,71 +73,36 @@
 		<span><a href="https://www.youtube.com/@zidollshop764">Contact Us</a></span>
 	</nav>
 </header>
-	<div class="main">
-		<div class="banner">
-			<h2>기술등급예측모델</h2>
-			<p>500개 데이터 활용</p>
-		</div>
+<div class="main">
+	<div class="banner">
+		<h2>기술등급예측모델</h2>
+		<p>500개 데이터 활용</p>
 	</div>
-<body>
-	<div class="div_tag">
-
-                  <!-- Default input -->
-                  <div class="form-group">
-                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">평균 온도</label>
-                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="avg_temp" class="form-control" id="formGroupExampleInput" placeholder="평균 온도를 입력하세요.">
-                  </div>
-                  <!-- Default input -->
-                  <div class="form-group">
-                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">최소 온도</label>
-                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="min_temp" class="form-control" id="formGroupExampleInput" placeholder="최소 온도를 입력하세요.">
-                  </div>
-                  <!-- Default input -->
-                  <div class="form-group">
-                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">최대 온도</label>
-                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="max_temp" class="form-control" id="formGroupExampleInput" placeholder="최대 온도를 입력하세요.">
-                  </div>
-                  <!-- Default input -->
-                  <div class="form-group">
-                      <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">강수량</label>
-                      <input style="font-family: 'Nanum Barun Gothic'" type="text" name="rain_fall" class="form-control" id="formGroupExampleInput" placeholder="강수량을 입력하세요.">
-                  </div>
-              <!-- Default form group -->
-              <button style="font-family: 'Nanum Barun Gothic' !important;" type="submit" class="btn btn-primary btn-md pull-right">예측하기</button>
-
-            </form>
-
-          </div>
-          <!--/Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-6 col-md-12">
-
-            <p class="h5 text-center mb-4" style="font-family: 'Nanum Barun Gothic'">예측 결과</p>
-            {% if price %}
-              <h5 class="text-center mt-3">예측된 가격은 {{ price }}원입니다.</h5>
-            {% endif %}
-          </div>
-          <!--/Grid column-->
-
-        </div>
-        <!--/Grid row-->
-
-      </section>
-      <!--Section: Main features & Quick Start-->
-
-    </div>
-  </main>
-  <!--Main layout-->
-
-    
-		<li><div>
-			<a href="https://www.instagram.com/p/Clax67QS1S1/?utm_source=ig_web_copy_link">
-			<img src="https://mblogthumb-phinf.pstatic.net/MjAyMjExMjZfMjc3/MDAxNjY5NDQ0MTQ3NDc4.WPBS1JiVuYu94gaoM65p2oPc0pzSiyxiYfnWnaAcPaQg.eeCRqud065JDvK6hzN_Nk_Pat7ijWRbmE7LymmAMAJ4g.JPEG.zidollshop/564230F7-9841-45CC-8FDC-306974186E71-30386-00000565F5626CFB.jpg?type=w800" width="300" height="250">
-			<div class="exhibitionCard-textBox">판매 예정 컬렉션</div>
-			</a>
-		</div></li>
+</div>
+<div class="div_tag">
+	<!-- Default input -->
+	<div class="form-group">
+		<label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">평균 온도</label>
+		<input style="font-family: 'Nanum Barun Gothic'" type="text" name="avg_temp" class="form-control" id="formGroupExampleInput" placeholder="평균 온도를 입력하세요.">
 	</div>
+	<!-- Default input -->
+	<div class="form-group">
+		<label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">최소 온도</label>
+		<input style="font-family: 'Nanum Barun Gothic'" type="text" name="min_temp" class="form-control" id="formGroupExampleInput" placeholder="최소 온도를 입력하세요.">
+	</div>
+	<!-- Default input -->
+	<div class="form-group">
+		<label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">최대 온도</label>
+		<input style="font-family: 'Nanum Barun Gothic'" type="text" name="max_temp" class="form-control" id="formGroupExampleInput" placeholder="최대 온도를 입력하세요.">
+	</div>
+	<!-- Default input -->
+	<div class="form-group">
+		<label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">강수량</label>
+		<input style="font-family: 'Nanum Barun Gothic'" type="text" name="rain_fall" class="form-control" id="formGroupExampleInput" placeholder="강수량을 입력하세요.">
+	</div>
+	<!-- Default form group -->
+	<button style="font-family: 'Nanum Barun Gothic' !important;" type="submit" class="btn btn-primary btn-md pull-right">예측하기</button>
+</div>
 
 <script>
 function cal(nn) {
@@ -147,7 +110,6 @@ function cal(nn) {
       document.querySelector('#cal' + i).style.display = 'none'
   document.querySelector('#cal' + nn).style.display = 'inline-block'
 }
-
 </script>
 
 <script src="cal2.js"></script>
