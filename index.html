@@ -1,226 +1,88 @@
-<!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>TECH</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Bootstrap core CSS -->
-  <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
-  <!-- Material Design Bootstrap -->
-  <link href="{{url_for('static', filename='css/mdb.min.css')}}" rel="stylesheet">
-  <!-- Your custom styles (optional) -->
-  <link href="{{url_for('static', filename='css/style.min.css')}}" rel="stylesheet">
-  <!-- 나눔 바른 고딕 웹 폰트 적용하기 -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css">
-  <style type="text/css">
-
-    html,
-    body,
-    header,
-    .carousel {
-      height: 100%;
-    }
-
-    @media (min-width: 800px) and (max-width: 850px) {
-            .navbar:not(.top-nav-collapse) {
-                background: #1C2331!important;
-            }
-        }
-
-    .hangul {
-        font-family: 'Nanum Barun Gothic' !important;
-    }
-
-  </style>
+<title>META DOLLWEB</title>
 </head>
-
 <body>
-
-  <!-- Navbar -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
-    <div class="container">
-
-      <!-- Brand -->
-      <a class="navbar-brand" href="#" target="_blank">
-        <strong class="hangul">TECH</strong>
-      </a>
-
-      <!-- Collapse -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Links -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-        <!-- Left -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-        </ul>
-
-      </div>
-
-    </div>
-  </nav>
-  <!-- Navbar -->
-
-  <!--Carousel Wrapper-->
-  <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
-
-    <!--Indicators-->
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-1z" data-slide-to="1"></li>
-      <li data-target="#carousel-example-1z" data-slide-to="2"></li>
-    </ol>
-    <!--/.Indicators-->
-
-    <!--Slides-->
-    <div class="carousel-inner" role="listbox">
-
-      <!--First slide-->
-      <div class="carousel-item active">
-        <div class="view">
-
-          <!--Video source-->
-          <video class="video-intro" autoplay loop>
-            <source src="https://mdbootstrap.com/img/video/city.mp4" type="video/mp4" >
-          </video>
-
-          <!-- Mask & flexbox options-->
-          <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
-
-          </div>
-          <!-- Mask & flexbox options-->
-
-        </div>
-      </div>
-      <!--/First slide-->
-
-      <!--Second slide-->
-      <div class="carousel-item">
-        <div class="view">
-
-          <!--Video source-->
-          <video class="video-intro" autoplay loop>
-              <source src="https://mdbootstrap.com/img/video/forest.mp4" type="video/mp4">
-          </video>
-
-          <!-- Mask & flexbox options-->
-          <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
-
-          </div>
-          <!-- Mask & flexbox options-->
-
-        </div>
-      </div>
-      <!--/Second slide-->
-
-      <!--Third slide-->
-      <div class="carousel-item">
-        <div class="view">
-
-          <!--Video source-->
-          <video class="video-intro" autoplay loop>
-              <source src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4">
-          </video>
-
-          <!-- Mask & flexbox options-->
-          <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
-
-          </div>
-          <!-- Mask & flexbox options-->
-
-        </div>
-      </div>
-      <!--/Third slide-->
-
-    </div>
-    <!--/.Slides-->
-
-    <!--Controls-->
-    <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-    <!--/.Controls-->
-
-  </div>
-  <!--/.Carousel Wrapper-->
-
-  <!--Main layout-->
-  <main>
-    <div class="container">
-
-      <!--Section: Main info-->
-      <section class="mt-5 wow fadeIn">
-
-        <!--Grid row-->
-        <div class="row">
-
-          <!--Grid column-->
-          <div class="col-md-6 mb-4">
-
-            <img src="{{url_for('static', filename='img/graph.png')}}" class="img-fluid z-depth-1-half" alt="">
-
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-md-6 mb-4">
-
-            <!-- Main heading -->
-            <h3 class="h3 mb-3" style="font-family: 'Nanum Barun Gothic'">배추 가격 예측 결과</h3>
-            <p style="font-family: 'Nanum Barun Gothic'">머신 러닝 선형 회귀(Linear Regression) 모델을 확장하여 시계열에 따른 배추 가격을 예측하고 학습 결과를 확인했습니다.
-              <strong style="font-family: 'Nanum Barun Gothic'">미래</strong>의 배추 가격을 효과적으로 예측할 수 있습니다. </p>
-            <p></p>
-            <!-- Main heading -->
-
-            <hr>
-
-            <p style="font-family: 'Nanum Barun Gothic'">
-              <strong>2,900</strong>개 이상의 데이터를 활용하여
-              <strong>1.8%</strong> 미만의 데이터 오차율을 보이는
-              <strong>배추 가격 예측 모델</strong>을 개발했습니다.
-            </p>
-
-          </div>
-          <!--Grid column-->
-
-        </div>
-        <!--Grid row-->
-
-      </section>
-      <!--Section: Main info-->
-
-      <hr class="my-5">
-
-      <!--Section: Main features & Quick Start-->
-      <section>
-
-        <h3 class="h3 text-center mb-5" style="font-family: 'Nanum Barun Gothic'">미래 데이터 예측해보기</h3>
-
-        <!--Grid row-->
-        <div class="row wow fadeIn">
-
-          <!--Grid column-->
-          <div class="col-lg-6 col-md-12 px-4">
-
-            <form action="/" method="post">
-              <!-- Default form group -->
+<h1><a href="index.html">META DOLLWEB</a></h1>
+<style>
+	*{
+		list-style: none;
+		text-decoration: none;
+		border-collapse: collapse;
+		margin: 0px;
+		padding: 0px;
+		color: #000;
+	}
+	header{
+		width: 90%; height: 20px;
+		overflow: hidden;
+		margin: 0px auto;
+	}
+	header > h1{ 
+		float: left; 
+		margin-top: 10px;
+	}
+	header > nav{
+		float: right;
+		margin-top: 0px;
+	}
+	header nav a{
+		display: inline-block;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.main {
+		position: relative;
+		overflow: hidden;
+		height: 100px;
+		background: #fff;
+	}
+	.main > .banner{
+		text-align: center;
+		width: 100%;
+		height: 100px;
+		margin: 0px auto;
+		margin-top: 10px;
+		background: #fff;
+	}
+	.main > .banner > h2{
+		font-size: 2.5em;
+	}
+	.div_tag{
+		display: flex;
+		width: 1200px;
+		background:#fff;
+		text-align: center;
+		margin: 0 auto;
+		height: 290px;		
+	}
+	.div_tag > li{
+		flex: 1;
+		display: inline-block;
+		float: left;
+		margin : 10px;
+		border: 1px solid #fff;
+	}
+	.div_tag > li > div{
+		text-align: center;
+	}
+</style>	
+</head>
+<header>
+	<nav>
+		<span><a href="https://dollweb.github.io/meta2022/">Home</a></span>
+		<span><a href="https://www.instagram.com/zidollshop/">About</a></span>
+		<span><a href="https://www.youtube.com/@zidollshop764">Contact Us</a></span>
+	</nav>
+</header>
+	<div class="main">
+		<div class="banner">
+			<h2>메타버스 인형놀이터</h2>
+			<p>인형 컬렉션 메타 인스타그램 둘러보기</p>
+		</div>
+	</div>
+<body>
+	<div class="div_tag">
 
                   <!-- Default input -->
                   <div class="form-group">
@@ -270,29 +132,47 @@
   </main>
   <!--Main layout-->
 
-  <!--Footer-->
-  <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+    
+		<li><div>
+			<a href="https://www.instagram.com/p/Clax67QS1S1/?utm_source=ig_web_copy_link">
+			<img src="https://mblogthumb-phinf.pstatic.net/MjAyMjExMjZfMjc3/MDAxNjY5NDQ0MTQ3NDc4.WPBS1JiVuYu94gaoM65p2oPc0pzSiyxiYfnWnaAcPaQg.eeCRqud065JDvK6hzN_Nk_Pat7ijWRbmE7LymmAMAJ4g.JPEG.zidollshop/564230F7-9841-45CC-8FDC-306974186E71-30386-00000565F5626CFB.jpg?type=w800" width="300" height="250">
+			<div class="exhibitionCard-textBox">판매 예정 컬렉션</div>
+			</a>
+		</div></li>
+		
+		<li><div>
+			<a href="https://www.instagram.com/p/ClKjwoDSwtc/?utm_source=ig_web_copy_link">
+			<img src="https://mblogthumb-phinf.pstatic.net/MjAyMjExMjZfMjQw/MDAxNjY5NDQ0MTQ2OTYz.pBQDdvUxeyeDGdGOsML1gk1HXhlkDuLS6Cfk9wfx40gg.-gJP2jgotpC3EDQc31UVboCX02c2Q-97yygOVwawai0g.JPEG.zidollshop/06F1F31F-1C27-4EAB-8264-F5A686E1A7F6-30386-0000056627FE7D60.jpg?type=w800" width="300" height="250">
+			<div class="exhibitionCard-textBox">늦가을 컬렉션</div>
+			</a>
+		</div></li>
+		
+		<li><div>
+			<a href="https://www.instagram.com/p/Ci3-CflPTtC/?utm_source=ig_web_copy_link">
+			<img src="https://mblogthumb-phinf.pstatic.net/MjAyMjExMjdfMjg1/MDAxNjY5NTQwMDE5Mzg3.Bwx3AhcQmYxyQw890GyzPrAO-Bln1t-fHs0GwdKV3FUg.tqoPV4ADkT8h73TtZM7-CrxMFO2QGN_h1lYN3Mpsewwg.JPEG.zidollshop/EE1AEC23-ECB2-481A-B3F5-F6FFE0919B87-50612-000009B239D2DFC1.jpg?type=w800" width="250" height="250">
+			<div class="exhibitionCard-textBox">주말 달달 컬렉션</div>
+			</a>
+		</div></li>
+	
+		<li><div>
+			<a href="https://www.instagram.com/p/Cgn04HWv2Bb/?utm_source=ig_web_copy_link">
+    			<img src="https://mblogthumb-phinf.pstatic.net/MjAyMjA3MDVfMjQy/MDAxNjU2OTY2ODEyMTQy.Ru9qDhlupR7Cn-e65YsAg3B5V1HE-PGkXs7ntB2CxVgg.XlH6rUYgvxMqmeWyItojsSEe_nPR1cb0zhZrIggHdMgg.JPEG.zidollshop/3A472B3B-4EC3-483F-BEFB-E3CD4FAF64D2-277-00000002F13B8050.jpg?type=w800" width="250" height="250">
+			<div class="exhibitionCard-textBox">쪼륵 컬렉션</div>				
+			</a>
+			</div></div>
+		</div></li>
+	</div>
 
-   
-    <hr class="my-4">
+<script>
+function cal(nn) {
+  for ( i=0 ; i<=3 ; i++ )
+      document.querySelector('#cal' + i).style.display = 'none'
+  document.querySelector('#cal' + nn).style.display = 'inline-block'
+}
 
-  </footer>
-  <!--/.Footer-->
+</script>
 
-  <!-- SCRIPTS -->
-  <!-- JQuery -->
-  <script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.3.1.min.js')}}"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="{{url_for('static', filename='js/popper.min.js')}}"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="{{url_for('static', filename='js/mdb.min.js')}}"></script>
-  <!-- Initializations -->
-  <script type="text/javascript">
-    // Animations initialization
-    new WOW().init();
-  </script>
+<script src="cal2.js"></script>
+
 </body>
-
 </html>
