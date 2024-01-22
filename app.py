@@ -1,17 +1,5 @@
 import pandas as pd
 import numpy as np
-from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error
-from scipy import stats
-from sklearn.linear_model import Ridge
-from sklearn.linear_model import Lasso
-from sklearn.linear_model import ElasticNet
-from sklearn.ensemble import GradientBoostingRegressor
-from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
-from xgboost import XGBRegressor
-from lightgbm import LGBMRegressor
-from sklearn.ensemble import ExtraTreesRegressor
 import numpy as np
 import tensorflow as tf
 from sklearn.preprocessing import MinMaxScaler
