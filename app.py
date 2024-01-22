@@ -1,7 +1,5 @@
 import pandas as pd
 import numpy as np
-import numpy as np
-import tensorflow as tf
 from sklearn.preprocessing import MinMaxScaler
 import streamlit as st
 from reportlab.pdfgen import canvas
