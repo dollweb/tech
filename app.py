@@ -13,8 +13,8 @@ st.subheader("기술정보를 입력해주세요")
 st.markdown("**기술정보**를 입력해주세요")
 st.text("기술정보를 입력해주세요")
 
-file_path = "https://github.com/dollweb/tech/blob/main/창업기업평가_하나은행_2022_원본_05_정규화.csv"
-df = pd.read_excel(file_path, sheet_name='Sheet1')
+file_url = "https://github.com/dollweb/tech/blob/main/창업기업평가_하나은행_2022_원본_05_정규화.xls"
+df = pd.read_excel(file_url, sheet_name='Sheet1')
 y = df.T_SC
 tf.compat.v1.disable_eager_execution()
 tf.compat.v1.global_variables_initializer()
