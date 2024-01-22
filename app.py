@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import pandas as pd
 import numpy as np
 import streamlit as st
@@ -11,7 +13,7 @@ st.subheader("기술정보를 입력해주세요")
 st.markdown("**기술정보**를 입력해주세요")
 st.text("기술정보를 입력해주세요")
 
-file_path = "https://github.com/dollweb/tech/blob/main/창업기업평가_하나은행_2022_원본_05_정규화.csv"
+file_path = "https://github.com/dollweb/tech/blob/main/창업기업평가_하나은행_2022_원본_05_정규화.xlsx'"
 df = pd.read_excel(file_path, sheet_name='Sheet1')
 y = df.T_SC
 tf.compat.v1.disable_eager_execution()
