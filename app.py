@@ -3,6 +3,7 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
+import urllib.parse
 
 st.set_page_config(
     page_title="TECH"
@@ -13,8 +14,9 @@ st.subheader("기술정보를 입력해주세요")
 st.markdown("**기술정보**를 입력해주세요")
 st.text("기술정보를 입력해주세요")
 
-file_url = "https://raw.githubusercontent.com/dollweb/tech/main/창업기업평가_하나은행_2022_원본_05_정규화.xls"
-df = pd.read_excel(file_url, sheet_name='Sheet1')
+url = 'https://raw.githubusercontent.com/dollweb/tech/main/창업기업평가_하나은행_2022_원본_05_정규화.csv'
+encoded_url = urllib.parse.quote(url, safe=':/')
+df = pd.read_csv(encoded_url)
 y = df.T_SC
 tf.compat.v1.disable_eager_execution()
 tf.compat.v1.global_variables_initializer()
@@ -55,7 +57,7 @@ with col1:
       if submit:
          with tf.compat.v1.Session() as sess:
             sess.run(model_tf)
-            save_path = "https://github.com/dollweb/tech/blob/main/saved.cpkt"
+            save_path = '/content/drive/MyDrive/research/saved.cpkt'
             saver.restore(sess, save_path)
             scaler_T_SC = MinMaxScaler()
             input_data = np.array([[T_32_temp, T_37_temp, T_43_temp, T_47_temp, T_50_temp, T_53_temp, T_55_temp, T_56_temp, T_57_temp, T_63_temp, T_67_temp, T_80_temp, T_82_temp, T_83_temp, T_99_temp, T_106_temp, T_110_temp]]).reshape(1, -1)
