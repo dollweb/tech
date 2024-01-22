@@ -1,8 +1,6 @@
 import pandas as pd
 import numpy as np
-from sklearn.preprocessing import MinMaxScaler
 import streamlit as st
-from reportlab.pdfgen import canvas
 
 st.set_page_config(
     page_title="TECH"
