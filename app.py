@@ -11,7 +11,7 @@ st.subheader("기술정보를 입력해주세요")
 st.markdown("**기술정보**를 입력해주세요")
 st.text("기술정보를 입력해주세요")
 
-file_path = "https://github.com/dollweb/tech/main/창업기업평가_하나은행_2022_원본_05_정규화.xlsx"
+file_path = "https://github.com/dollweb/tech/blob/main/창업기업평가_하나은행_2022_원본_05_정규화.xlsx"
 df = pd.read_excel(file_path, sheet_name='Sheet1')
 y = df.T_SC
 tf.compat.v1.disable_eager_execution()
@@ -53,7 +53,7 @@ with col1:
       if submit:
          with tf.compat.v1.Session() as sess:
             sess.run(model_tf)
-            save_path = "https://github.com/dollweb/tech/main/saved.cpkt"
+            save_path = "https://github.com/dollweb/tech/blob/main/saved.cpkt"
             saver.restore(sess, save_path)
             scaler_T_SC = MinMaxScaler()
             input_data = np.array([[T_32_temp, T_37_temp, T_43_temp, T_47_temp, T_50_temp, T_53_temp, T_55_temp, T_56_temp, T_57_temp, T_63_temp, T_67_temp, T_80_temp, T_82_temp, T_83_temp, T_99_temp, T_106_temp, T_110_temp]]).reshape(1, -1)
