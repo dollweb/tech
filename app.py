@@ -61,10 +61,10 @@ with col1:
       if submit:
          with tf.compat.v1.Session() as sess:
             sess.run(model_tf)
-            # save_path = 'C:/research/saved.cpkt'
+            save_path = 'C:/research/saved.cpkt'
             # save_path = '/content/drive/MyDrive/research/saved.cpkt'
             # save_path = 'https://raw.githubusercontent.com/dollweb/tech/main/saved.cpkt'
-            save_path = "https://raw.githubusercontent.com/dollweb/tech/main/saved.cpkt"
+            # save_path = "https://raw.githubusercontent.com/dollweb/tech/main/saved.cpkt"
             saver.restore(sess, save_path)
             scaler_T_SC = MinMaxScaler()
             input_data = np.array([[T_32_temp, T_37_temp, T_43_temp, T_47_temp, T_50_temp, T_53_temp, T_55_temp, T_56_temp, T_57_temp, T_63_temp, T_67_temp, T_80_temp, T_82_temp, T_83_temp, T_99_temp, T_106_temp, T_110_temp]]).reshape(1, -1)
