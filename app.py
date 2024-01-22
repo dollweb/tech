@@ -5,7 +5,7 @@ import numpy as np
 import streamlit as st
 import urllib.parse
 # import tensorflow as tf
-from sklearn.preprocessing import MinMaxScaler
+# from sklearn.preprocessing import MinMaxScaler
 
 st.set_page_config(
     page_title="TECH"
