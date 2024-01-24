@@ -8,10 +8,9 @@ import tensorflow as tf
 from sklearn.preprocessing import MinMaxScaler
 import subprocess
 
-def install_requirements():
-    subprocess.check_call(["pip", "install", "-r", "requirements.txt"])
-
-install_requirements()
+# def install_requirements():
+#     subprocess.check_call(["pip", "install", "-r", "requirements.txt"])
+# install_requirements()
 
 st.set_page_config(
     page_title="TECH"
