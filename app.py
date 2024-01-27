@@ -66,10 +66,10 @@ with col1:
       if submit:
          with tf.compat.v1.Session() as sess:
             sess.run(model_tf)
-            save_path = 'C:/research/saved.cpkt'
+            # save_path = 'C:/research/saved.cpkt'
             # save_path = '/content/drive/MyDrive/research/saved.cpkt'
             # save_path = 'https://raw.githubusercontent.com/dollweb/tech/main/'
-            # save_path = 'https://raw.githubusercontent.com/dollweb/tech/main/saved.cpkt'
+            save_path = 'https://raw.githubusercontent.com/dollweb/tech/main/saved.cpkt'
             # save_path = "https://raw.githubusercontent.com/dollweb/tech/main/saved.cpkt"
             # save_path = 'https://raw.githubusercontent.com/dollweb/tech/main/checkpoint.cpkt'
             saver.restore(sess, save_path)
