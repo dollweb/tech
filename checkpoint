@@ -1,5 +1,5 @@
-model_checkpoint_path: "/content/drive/MyDrive/research/saved.cpkt"
-all_model_checkpoint_paths: "/content/drive/MyDrive/research/saved.cpkt"
+# model_checkpoint_path: "/content/drive/MyDrive/research/saved.cpkt"
+# all_model_checkpoint_paths: "/content/drive/MyDrive/research/saved.cpkt"
 
 # model_checkpoint_path: "C:/research/saved.cpkt"
 # model_checkpoint_path: "C:/research/saved.cpkt"
