@@ -77,7 +77,7 @@ with col1:
             response = requests.get(save_path)
             content = response.content
             memory_file = io.BytesIO(content)
-            saver = tf.train.import_meta_graph('/path/to/model.ckpt.meta')
+            saver = tf.train.import_meta_graph(save_path + '.meta')
             # content_str = content.decode('utf-8')
             # memory_file = io.BytesIO(content_str.encode('utf-8'))
             saver.restore(sess, memory_file)
