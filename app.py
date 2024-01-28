@@ -73,10 +73,11 @@ with col1:
             # save_path = 'https://raw.githubusercontent.com/dollweb/tech/main/saved.cpkt'
             
             # save_path = 'https://github.com/dollweb/tech/raw/main/saved.cpkt'
-            save_path = "https://github.com/dollweb/tech/raw/main/saved.cpkt".encode('utf-8')
+            save_path = "https://github.com/dollweb/tech/raw/main/saved.cpkt"
             response = requests.get(save_path)
             content = response.content
             memory_file = io.BytesIO(content)
+            saver = tf.train.import_meta_graph('/path/to/model.ckpt.meta')
             # content_str = content.decode('utf-8')
             # memory_file = io.BytesIO(content_str.encode('utf-8'))
             saver.restore(sess, memory_file)
