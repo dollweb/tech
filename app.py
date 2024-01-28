@@ -68,11 +68,18 @@ with col1:
       if submit:
          with tf.compat.v1.Session() as sess:
             sess.run(model_tf)
+            
+            save_path = "./saved.cpkt"
+            url = 'https://github.com/dollweb/tech/raw/main/saved.cpkt'
+            response = requests.get(url)
+            with open(save_path, "wb") as f:
+               f.write(response.content)
+            saver.restore(sess, save_path)
             # save_path = 'C:/research/saved.cpkt'
             # save_path = '/content/drive/MyDrive/research/saved.cpkt'
             # save_path = 'https://raw.githubusercontent.com/dollweb/tech/main/saved.cpkt'
             # save_path = 'https://github.com/dollweb/tech/raw/main/saved.cpkt'
-            save_path = "https://github.com/dollweb/tech/raw/main/saved.cpkt"
+            # save_path = "https://github.com/dollweb/tech/raw/main/saved.cpkt"
             # response = requests.get(save_path)
             # content = response.content
             # memory_file = io.BytesIO(content)
@@ -87,8 +94,7 @@ with col1:
             # checkpoint_dir = "https://github.com/dollweb/tech/raw/main/"
             # latest_checkpoint = tf.train.latest_checkpoint(checkpoint_dir)
             # saver.restore(sess, latest_checkpoint)
-
-            saver.restore(sess, save_path)
+            # saver.restore(sess, save_path)
 
             scaler_T_SC = MinMaxScaler()
             input_data = np.array([[T_32_temp, T_37_temp, T_43_temp, T_47_temp, T_50_temp, T_53_temp, T_55_temp, T_56_temp, T_57_temp, T_63_temp, T_67_temp, T_80_temp, T_82_temp, T_83_temp, T_99_temp, T_106_temp, T_110_temp]]).reshape(1, -1)
