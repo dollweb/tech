@@ -1,11 +1,11 @@
 # model_checkpoint_path: "/content/drive/MyDrive/research/saved.cpkt"
 # all_model_checkpoint_paths: "/content/drive/MyDrive/research/saved.cpkt"
 
-model_checkpoint_path: "C:/research/saved.cpkt"
-all_model_checkpoint_paths: "C:/research/saved.cpkt"
+# model_checkpoint_path: "C:/research/saved.cpkt"
+# all_model_checkpoint_paths: "C:/research/saved.cpkt"
 
 # model_checkpoint_path: "https://raw.githubusercontent.com/dollweb/tech/main/saved.cpkt"
 # all_model_checkpoint_paths: "https://raw.githubusercontent.com/dollweb/tech/main/saved.cpkt"
 
-# model_checkpoint_path: 'https://github.com/dollweb/tech/raw/main/saved.cpkt'
-# all_model_checkpoint_paths: 'https://github.com/dollweb/tech/raw/main/saved.cpkt'
+model_checkpoint_path: 'https://github.com/dollweb/tech/raw/main/saved.cpkt'
+all_model_checkpoint_paths: 'https://github.com/dollweb/tech/raw/main/saved.cpkt'
