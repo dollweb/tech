@@ -79,7 +79,7 @@ with col1:
             # save_path = "https://raw.githubusercontent.com/dollweb/tech/main/saved.cpkt"
             # save_path = 'https://raw.githubusercontent.com/dollweb/tech/main/checkpoint.cpkt'
             # saver.restore(sess, save_path)
-            saver.restore(sess, memory_file)
+            saver.restore(sess, memory_file.decode('utf-8'))
             scaler_T_SC = MinMaxScaler()
             input_data = np.array([[T_32_temp, T_37_temp, T_43_temp, T_47_temp, T_50_temp, T_53_temp, T_55_temp, T_56_temp, T_57_temp, T_63_temp, T_67_temp, T_80_temp, T_82_temp, T_83_temp, T_99_temp, T_106_temp, T_110_temp]]).reshape(1, -1)
             input_data_normalized = scaler_T_SC.fit_transform(input_data)
