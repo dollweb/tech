@@ -70,7 +70,8 @@ with col1:
             sess.run(model_tf)
             # save_path = 'C:/research/saved.cpkt'
             # save_path = '/content/drive/MyDrive/research/saved.cpkt'
-            save_path = 'https://raw.githubusercontent.com/dollweb/tech/main/saved.cpkt'
+            # save_path = 'https://raw.githubusercontent.com/dollweb/tech/main/saved.cpkt'
+            save_path = 'https://github.com/dollweb/tech/raw/main/saved.cpkt'
             response = requests.get(save_path)
             content = response.content
             # memory_file = io.BytesIO(content)
@@ -81,6 +82,7 @@ with col1:
             # saver.restore(sess, save_path)
             content_str = content.decode('utf-8')
             memory_file = io.BytesIO(content_str.encode('utf-8'))
+            # saver.restore(sess, save_path.decode('utf-8'))
             saver.restore(sess, memory_file)
 
             scaler_T_SC = MinMaxScaler()
