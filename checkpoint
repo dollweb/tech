@@ -1,2 +1,2 @@
-model_checkpoint_path: 'https://github.com/dollweb/tech/raw/main/saved.cpkt'
-all_model_checkpoint_paths: 'https://github.com/dollweb/tech/raw/main/saved.cpkt'
+model_checkpoint_path: './saved.cpkt'
+all_model_checkpoint_paths:  './saved.cpkt' 
