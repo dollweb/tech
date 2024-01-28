@@ -72,7 +72,8 @@ with col1:
             # save_path = '/content/drive/MyDrive/research/saved.cpkt'
             # save_path = 'https://raw.githubusercontent.com/dollweb/tech/main/saved.cpkt'
             
-            save_path = 'https://github.com/dollweb/tech/raw/main/saved.cpkt'
+            # save_path = 'https://github.com/dollweb/tech/raw/main/saved.cpkt'
+            save_path = "https://github.com/dollweb/tech/raw/main/saved.cpkt".encode('utf-8')
             response = requests.get(save_path)
             content = response.content
             memory_file = io.BytesIO(content)
